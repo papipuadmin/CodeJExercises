@@ -28,12 +28,12 @@ public class FiguresToLetters {
         if (num>=-35) {
             long x = (35 + num) % 26;
             long litera = x + 65;
-            System.out.println("ID " + litera);
+
             System.out.println("The matching letter is - " + (char) litera);
         } else {
             long x = (16 + abs(num)) % 26;
             long litera = 90 - x;
-            System.out.println("ID " + litera);
+
             System.out.println("The matching letter is - " + (char) litera);
         }
 
