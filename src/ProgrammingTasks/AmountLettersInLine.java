@@ -1,8 +1,5 @@
 package ProgrammingTasks;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 
 /*TASK:
@@ -15,18 +12,17 @@ public class AmountLettersInLine {
     public static void main(String[] args) throws java.lang.Exception {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Please, enter the phrase to calculate the amount of characters in it");
+        System.out.println("Please, enter the phrase to calculate the amount of each character in it");
 
         String phrase = scan.nextLine();
 
         countChar(phrase);
-
     }
 
     private static void countChar(String text){
         String cleanText = text.replaceAll("\\s+", "").toLowerCase();
 
-        Map<Character,Integer> map = new HashMap<Character,Integer>();
+        Map<Character,Integer> map = new TreeMap<>();
 
         for(int i=0;i<cleanText.length();i++) {
 
@@ -37,6 +33,13 @@ public class AmountLettersInLine {
              map.put(ch, cnt);
             }
         }
+
+        if (map.isEmpty())  {
+            System.out.println("There is zero characters in your sentence!");
+            return;
+        }
+
+        System.out.println("The number of each character is:");
 
         for(Iterator<Character> it = map.keySet().iterator(); it.hasNext(); )
         {
