@@ -1,6 +1,6 @@
 package ProgrammingTasks;
-import java.util.*;
 
+import java.util.*;
 
 /*TASK:
     Вывести статистику по количеству встречающихся в строке букв. Выводятся только буквы, которые есть в тексте.

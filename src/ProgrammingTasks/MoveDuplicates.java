@@ -39,7 +39,6 @@ public class MoveDuplicates {
             System.out.print(inputArray[i] + "  ");
         }
 
-
     }
 
     private static void swap(String[] arr, int read, int write) {
