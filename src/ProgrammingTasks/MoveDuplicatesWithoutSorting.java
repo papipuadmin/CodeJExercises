@@ -8,7 +8,7 @@ public class MoveDuplicatesWithoutSorting {
 
     public static void main(String[] args) {
 
-        String[] inputArray = {"text", "wolf", "message", "bio", "aqua", "text", "message", "wolf", "retro", "retro", "text", "message", "retro", "bio"};
+        String[] inputArray = {"text", "wolf", "message", "bio",  "text", "aqua","message", "wolf", "retro", "retro", "text", "message", "retro", "bio"};
 
         //  String[] inputArray = new String[0];
         if (inputArray == null || inputArray.length == 0) {
@@ -24,7 +24,7 @@ public class MoveDuplicatesWithoutSorting {
             for (int j = i + 1; j < inputArray.length; j++) {
                 //current and next are same, move elements up
                 //and place the next number at the end.
-                if (inputArray[i] == inputArray[j]) {
+                if (inputArray[i].equalsIgnoreCase(inputArray[j])) {
                     String temp = inputArray[j];
                     for (int k = j; k < inputArray.length - 1; k++) {
                         inputArray[k] = inputArray[k + 1];
